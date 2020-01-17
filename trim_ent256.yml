@@ -1,0 +1,12 @@
+in_fastq_file_1:
+  class: File
+  path: FASTQ/ent256reads.1.fastq.gz
+in_fastq_file_2:
+  class: File
+  path: FASTQ/ent256reads.2.fastq.gz
+out_fastq_file_1:
+  class: File
+  path: FASTQ_Trimmed/ent256reads.1.fastq.gz
+out_fastq_file_2:
+  class: File
+  path: FASTQ_Trimmed/ent256reads.2.fastq.gz
