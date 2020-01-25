@@ -1,12 +1,9 @@
-in_fastq_file_1:
+in_file_1:
   class: File
-  path: FASTQ/ent256reads.1.fastq.gz
-in_fastq_file_2:
+  path: FASTQ/test.1.fastq.gz
+in_file_2:
   class: File
-  path: FASTQ/ent256reads.2.fastq.gz
-out_fastq_file_1:
-  class: File
-  path: FASTQ_Trimmed/ent256reads.1.fastq.gz
-out_fastq_file_2:
-  class: File
-  path: FASTQ_Trimmed/ent256reads.2.fastq.gz
+  path: FASTQ/test.2.fastq.gz
+out_file_1: test.1.fastq.gz
+out_file_2: test.2.fastq.gz
+outdir: FASTQ_Trimmed

@@ -1,3 +1,3 @@
 #! /bin/bash
 
-cwl-runner bsaseq_trim.cwl trim_ent256.yml
+cwl-runner --outdir FASTQ_Trimmed bsaseq_trim.cwl trim_ent256.yml

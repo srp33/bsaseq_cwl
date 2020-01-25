@@ -2,37 +2,42 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: sickle
-arguments: ["-s", "/dev/null", "-t", "sanger", "-g"]
+baseCommand: ["sickle", "pe", "-s", "/dev/null", "-t", "sanger", "-g"]
 requirements:
 - class: DockerRequirement
   dockerPull: quay.io/biocontainers/sickle-trim:1.33--2
 inputs:
-  in_fastq_file_1:
+  in_file_1:
     type: File
     inputBinding:
-      prefix: -f
-      separate: false
+      prefix: -f 
+      separate: true
       position: 1
-  in_fastq_file_2:
+  in_file_2:
     type: File
     inputBinding:
-      prefix: -r
-      separate: false
+      prefix: -r 
+      separate: true
       position: 2
-  out_fastq_file_1:
-    type: File
+  out_file_1:
+    type: string
     inputBinding:
       prefix: -o
-      separate: false
       position: 3
-  out_fastq_file_2:
-    type: File
+  out_file_2:
+    type: string
     inputBinding:
-      prefix: -p
-      separate: false
+      prefix: -p 
       position: 4
 outputs:
+  out_file_1_output:
+    type: File
+    outputBinding:
+      glob: $(inputs.out_file_1)
+  out_file_2_output:
+    type: File
+    outputBinding:
+      glob: $(inputs.out_file_2)
   example_out:
     type: stdout
 stdout: output.txt
