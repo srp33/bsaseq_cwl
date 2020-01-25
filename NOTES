@@ -1,0 +1,4 @@
+https://cwl.discourse.group/t/create-move-output-of-a-tool-to-a-specific-location/51/4
+https://cwl.discourse.group/t/pass-writeable-output-directory-to-a-tool/19/15
+
+Use this as base image: https://github.com/phusion/baseimage-docker

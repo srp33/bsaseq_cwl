@@ -1,0 +1,4 @@
+gzipped_file:
+    class: File
+    path: Genome/Zea_mays.B73_RefGen_v4.dna.toplevel.fa.gz
+out_file: Zea_mays.B73_RefGen_v4.dna.toplevel.fa
