@@ -1,2 +1,2 @@
 file_url: ftp://ftp.gramene.org/pub/gramene/CURRENT_RELEASE/fasta/zea_mays/dna/Zea_mays.B73_RefGen_v4.dna.toplevel.fa.gz
-out_file: Zea_mays.B73_RefGen_v4.dna.toplevel.fa.gz
+out_file_name: Zea_mays.B73_RefGen_v4.dna.toplevel.fa

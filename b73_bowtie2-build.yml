@@ -1,3 +1,5 @@
-the_file:
+threads: 16
+fasta_file:
     class: File
     path: Genome/Zea_mays.B73_RefGen_v4.dna.toplevel.fa
+base_name: B73
