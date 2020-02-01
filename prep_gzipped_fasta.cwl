@@ -1,15 +1,15 @@
 #!/usr/bin/env cwl-runner
 
-cwlVersion: v1.1
+cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: ["bash", "go.sh"]
 requirements:
   InlineJavascriptRequirement: {}
   DockerRequirement:
-    dockerImageId: deleteme
+    dockerImageId: prep_gzipped_fasta
     dockerFile: |-
-      FROM phusion/baseimage:master-amd64
-      RUN apt update; apt install wget
+      FROM biocontainers/biocontainers:v1.0.0_cv4
+      RUN conda install -c bioconda samtools -y
   InitialWorkDirRequirement:
     listing:
     - entryname: go.sh
@@ -18,6 +18,7 @@ requirements:
 
         wget -O $LOCAL_FILE $(inputs.file_url)
         gunzip -c $LOCAL_FILE > $(runtime.outdir)/$(inputs.out_file_name)
+        samtools faidx $(runtime.outdir)/$(inputs.out_file_name)
 inputs:
   file_url:
     type: string
@@ -26,7 +27,9 @@ inputs:
   out_file_name:
     type: string
 outputs:
-  out_file:
-    type: File
+  out_files:
+    type:
+      type: array
+      items: File
     outputBinding:
-      glob: $(inputs.out_file_name)
+      glob: "$(inputs.out_file_name)*"

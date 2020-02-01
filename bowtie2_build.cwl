@@ -30,5 +30,5 @@ outputs:
       type: array
       items: File
     outputBinding:
-      glob: "B73*"
+      glob: "$(inputs.base_name)*"
 stdout: output.txt

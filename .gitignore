@@ -1,4 +1,6 @@
-FASTQ*
 *.txt
+BAM
+FASTQ*
 Genome
 nohup*
+Pileups
