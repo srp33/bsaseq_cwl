@@ -10,4 +10,4 @@ fastq_file_2:
   class: File
   path: FASTQ_Trimmed/ent40reads.2.fastq.gz
 out_bam_file_name: ent40.bam
-threads: 16
+threads: 10
