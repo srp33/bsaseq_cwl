@@ -1,0 +1,8 @@
+in_file_1:
+  class: File
+  path: FASTQ/ent40reads.1.fastq.gz
+in_file_2:
+  class: File
+  path: FASTQ/ent40reads.2.fastq.gz
+out_file_1: ent40reads.1.fastq.gz
+out_file_2: ent40reads.2.fastq.gz

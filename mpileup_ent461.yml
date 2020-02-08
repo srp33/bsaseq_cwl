@@ -5,5 +5,5 @@ fasta_prefix: B73
 fasta_file_extension: .fa
 bam_file:
   class: File
-  path: BAM/ent256.bam
-out_file_name: ent256.pileup
+  path: BAM/ent461.bam
+out_file_name: ent461.pileup
