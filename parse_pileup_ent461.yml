@@ -1,0 +1,4 @@
+in_file:
+  class: File
+  path: Pileups/ent461.pileup
+out_file_name: ent461.tsv

@@ -1,0 +1,4 @@
+in_file:
+  class: File
+  path: Pileups_TSV_Filtered/ent40.tsv
+out_file_name: ent40.vcf

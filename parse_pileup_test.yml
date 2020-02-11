@@ -1,4 +1,4 @@
 in_file:
   class: File
-  path: Pileups_TSV/test.tsv
+  path: Pileups/test.pileup
 out_file_name: test.tsv
