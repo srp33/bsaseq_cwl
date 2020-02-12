@@ -1,0 +1,10 @@
+main_vcf_file:
+  class: File
+  path: VCF/ent256.vcf
+subtract_vcf_file_1:
+  class: File
+  path: VCF/a619.vcf
+subtract_vcf_file_2:
+  class: File
+  path: Ref_VCF/zea_mays.vcf
+out_file_name: ent256.vcf

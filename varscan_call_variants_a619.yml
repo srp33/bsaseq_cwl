@@ -1,0 +1,4 @@
+in_file:
+  class: File
+  path: Pileups_TSV_Filtered/a619.tsv
+out_file_name: a619.vcf

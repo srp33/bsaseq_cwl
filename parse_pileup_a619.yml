@@ -1,0 +1,4 @@
+in_file:
+  class: File
+  path: Pileups/a619.pileup
+out_file_name: a619.tsv
