@@ -55,4 +55,8 @@ SETTINGS="--tmpdir-prefix /Applications/tmp/cwl-runner_tmp --tmp-outdir-prefix /
 #cwl-runner --outdir VCF_Subtracted $SETTINGS subtract_variants.cwl subtract_variants_ent40.yml &
 #wait
 
-
+cwl-runner --outdir VCF_Annotated $SETTINGS annotate_variants.cwl annotate_variants_ent256.yml
+#cwl-runner --outdir VCF_Annotated $SETTINGS annotate_variants.cwl annotate_variants_ent256.yml &
+#cwl-runner --outdir VCF_Annotated $SETTINGS annotate_variants.cwl annotate_variants_ent461.yml &
+#cwl-runner --outdir VCF_Annotated $SETTINGS annotate_variants.cwl annotate_variants_ent40.yml &
+wait

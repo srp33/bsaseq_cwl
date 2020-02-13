@@ -25,7 +25,7 @@ outputs:
   out_files:
     type: File
     outputBinding:
-      glob: "$(inputs.out_file_name)*"
+      glob: "$(inputs.out_file_name)"
 stdout: output.txt
 arguments:
     - shellQuote: false
