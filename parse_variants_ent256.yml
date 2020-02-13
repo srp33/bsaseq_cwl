@@ -1,0 +1,4 @@
+vcf_file:
+  class: File
+  path: VCF_Annotated/ent256.vcf
+out_file_name: ent256.tsv

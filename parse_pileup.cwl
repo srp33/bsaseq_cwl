@@ -134,12 +134,10 @@ arguments:
       valueFrom: >
         OUT_FILE="$(runtime.outdir)/$(inputs.out_file_name)"
 
-        TEMP_FILE=/tmp/chr1.pileup
-
-        mawk '{ if ($1==1) { print } }' "$(inputs.in_file.path)" > \${TEMP_FILE}
+        #mawk '{ if ($1==1) { print } }' "$(inputs.in_file.path)" > \${TEMP_FILE}
         
         perl pileup_parser.pl
-        \${TEMP_FILE}
+        $(inputs.in_file.path)
         3
         5
         6

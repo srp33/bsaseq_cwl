@@ -27,5 +27,5 @@ stdout: output.txt
 arguments:
     - shellQuote: false
       valueFrom: >
-        snpEff -Xmx4g Zea_mays $(inputs.vcf_file.path)
+        snpEff -Xmx8g Zea_mays -canon $(inputs.vcf_file.path)
         > $(runtime.outdir)/$(inputs.out_file_name)

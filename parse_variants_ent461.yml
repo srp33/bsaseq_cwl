@@ -1,0 +1,4 @@
+vcf_file:
+  class: File
+  path: VCF_Annotated/ent461.vcf
+out_file_name: ent461.tsv
