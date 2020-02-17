@@ -1,0 +1,4 @@
+vcf_file:
+  class: File
+  path: VCF_Subtracted/ent285.vcf
+out_file_name: ent285.vcf

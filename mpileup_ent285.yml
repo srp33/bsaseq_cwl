@@ -1,0 +1,9 @@
+fasta_dir:
+  class: Directory
+  path: Genome
+fasta_prefix: B73
+fasta_file_extension: .fa
+bam_file:
+  class: File
+  path: BAM/ent285.bam
+out_file_name: ent285.pileup

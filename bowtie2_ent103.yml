@@ -1,0 +1,13 @@
+fasta_dir:
+  class: Directory
+  path: Genome
+fasta_prefix: B73
+fasta_file_extension: .fa
+fastq_file_1:
+  class: File
+  path: FASTQ_Trimmed/ent103reads.1.fastq.gz
+fastq_file_2:
+  class: File
+  path: FASTQ_Trimmed/ent103reads.2.fastq.gz
+out_bam_file_name: ent103.bam
+threads: 10

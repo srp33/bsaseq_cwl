@@ -13,55 +13,73 @@ SETTINGS="--tmpdir-prefix /Applications/tmp/cwl-runner_tmp --tmp-outdir-prefix /
 #cwl-runner --outdir FASTQ_Trimmed $SETTINGS sickle_trim.cwl trim_ent256.yml &
 #cwl-runner --outdir FASTQ_Trimmed $SETTINGS sickle_trim.cwl trim_ent461.yml &
 #cwl-runner --outdir FASTQ_Trimmed $SETTINGS sickle_trim.cwl trim_ent40.yml &
+cwl-runner --outdir FASTQ_Trimmed $SETTINGS sickle_trim.cwl trim_ent103.yml &
+cwl-runner --outdir FASTQ_Trimmed $SETTINGS sickle_trim.cwl trim_ent285.yml &
 #cwl-runner --outdir FASTQ_Trimmed $SETTINGS sickle_trim.cwl trim_a619.yml &
-#wait
+wait
 
 ##cwl-runner --outdir BAM $SETTINGS bowtie2_align.cwl bowtie2_test.yml
 #cwl-runner --outdir BAM $SETTINGS bowtie2_align.cwl bowtie2_ent256.yml &
 #cwl-runner --outdir BAM $SETTINGS bowtie2_align.cwl bowtie2_ent461.yml &
 #cwl-runner --outdir BAM $SETTINGS bowtie2_align.cwl bowtie2_ent40.yml &
+cwl-runner --outdir BAM $SETTINGS bowtie2_align.cwl bowtie2_ent103.yml &
+cwl-runner --outdir BAM $SETTINGS bowtie2_align.cwl bowtie2_ent285.yml &
 #cwl-runner --outdir BAM $SETTINGS bowtie2_align.cwl bowtie2_a619.yml &
-#wait
+wait
 
 #cwl-runner --outdir Pileups $SETTINGS mpileup.cwl mpileup_test.yml
 #cwl-runner --outdir Pileups $SETTINGS mpileup.cwl mpileup_ent256.yml &
 #cwl-runner --outdir Pileups $SETTINGS mpileup.cwl mpileup_ent461.yml &
 #cwl-runner --outdir Pileups $SETTINGS mpileup.cwl mpileup_ent40.yml &
+cwl-runner --outdir Pileups $SETTINGS mpileup.cwl mpileup_ent103.yml &
+cwl-runner --outdir Pileups $SETTINGS mpileup.cwl mpileup_ent285.yml &
 #cwl-runner --outdir Pileups $SETTINGS mpileup.cwl mpileup_a619.yml &
-#wait
+wait
 
 #cwl-runner --outdir Pileups_TSV $SETTINGS parse_pileup.cwl parse_pileup_test.yml
 #cwl-runner --outdir Pileups_TSV $SETTINGS parse_pileup.cwl parse_pileup_ent256.yml &
 #cwl-runner --outdir Pileups_TSV $SETTINGS parse_pileup.cwl parse_pileup_ent461.yml &
 #cwl-runner --outdir Pileups_TSV $SETTINGS parse_pileup.cwl parse_pileup_ent40.yml &
+cwl-runner --outdir Pileups_TSV $SETTINGS parse_pileup.cwl parse_pileup_ent103.yml &
+cwl-runner --outdir Pileups_TSV $SETTINGS parse_pileup.cwl parse_pileup_ent285.yml &
 #cwl-runner --outdir Pileups_TSV $SETTINGS parse_pileup.cwl parse_pileup_a619.yml &
-#wait
+wait
 
 #cwl-runner --outdir Pileups_TSV_Filtered $SETTINGS filter_pileup.cwl filter_pileup_test.yml
 #cwl-runner --outdir Pileups_TSV_Filtered $SETTINGS filter_pileup.cwl filter_pileup_ent256.yml &
 #cwl-runner --outdir Pileups_TSV_Filtered $SETTINGS filter_pileup.cwl filter_pileup_ent461.yml &
 #cwl-runner --outdir Pileups_TSV_Filtered $SETTINGS filter_pileup.cwl filter_pileup_ent40.yml &
+cwl-runner --outdir Pileups_TSV_Filtered $SETTINGS filter_pileup.cwl filter_pileup_ent103.yml &
+cwl-runner --outdir Pileups_TSV_Filtered $SETTINGS filter_pileup.cwl filter_pileup_ent285.yml &
 #cwl-runner --outdir Pileups_TSV_Filtered $SETTINGS filter_pileup.cwl filter_pileup_a619.yml &
-#wait
+wait
 
 #cwl-runner --outdir VCF $SETTINGS varscan_call_variants.cwl varscan_call_variants_test.yml
 #cwl-runner --outdir VCF $SETTINGS varscan_call_variants.cwl varscan_call_variants_ent256.yml &
 #cwl-runner --outdir VCF $SETTINGS varscan_call_variants.cwl varscan_call_variants_ent461.yml &
 #cwl-runner --outdir VCF $SETTINGS varscan_call_variants.cwl varscan_call_variants_ent40.yml &
+cwl-runner --outdir VCF $SETTINGS varscan_call_variants.cwl varscan_call_variants_ent103.yml &
+cwl-runner --outdir VCF $SETTINGS varscan_call_variants.cwl varscan_call_variants_ent285.yml &
 #cwl-runner --outdir VCF $SETTINGS varscan_call_variants.cwl varscan_call_variants_a619.yml &
-#wait
+wait
 
 #cwl-runner --outdir VCF_Subtracted $SETTINGS subtract_variants.cwl subtract_variants_ent256.yml &
 #cwl-runner --outdir VCF_Subtracted $SETTINGS subtract_variants.cwl subtract_variants_ent461.yml &
 #cwl-runner --outdir VCF_Subtracted $SETTINGS subtract_variants.cwl subtract_variants_ent40.yml &
-#wait
+cwl-runner --outdir VCF_Subtracted $SETTINGS subtract_variants.cwl subtract_variants_ent103.yml &
+cwl-runner --outdir VCF_Subtracted $SETTINGS subtract_variants.cwl subtract_variants_ent285.yml &
+wait
 
 #cwl-runner --outdir VCF_Annotated $SETTINGS annotate_variants.cwl annotate_variants_ent256.yml &
 #cwl-runner --outdir VCF_Annotated $SETTINGS annotate_variants.cwl annotate_variants_ent461.yml &
 #cwl-runner --outdir VCF_Annotated $SETTINGS annotate_variants.cwl annotate_variants_ent40.yml &
-#wait
+cwl-runner --outdir VCF_Annotated $SETTINGS annotate_variants.cwl annotate_variants_ent103.yml &
+cwl-runner --outdir VCF_Annotated $SETTINGS annotate_variants.cwl annotate_variants_ent285.yml &
+wait
 
-cwl-runner --outdir Variants $SETTINGS parse_variants.cwl parse_variants_ent256.yml &
-cwl-runner --outdir Variants $SETTINGS parse_variants.cwl parse_variants_ent461.yml &
-cwl-runner --outdir Variants $SETTINGS parse_variants.cwl parse_variants_ent40.yml &
+#cwl-runner --outdir Variants $SETTINGS parse_variants.cwl parse_variants_ent256.yml &
+#cwl-runner --outdir Variants $SETTINGS parse_variants.cwl parse_variants_ent461.yml &
+#cwl-runner --outdir Variants $SETTINGS parse_variants.cwl parse_variants_ent40.yml &
+cwl-runner --outdir Variants $SETTINGS parse_variants.cwl parse_variants_ent103.yml &
+cwl-runner --outdir Variants $SETTINGS parse_variants.cwl parse_variants_ent285.yml &
 wait
