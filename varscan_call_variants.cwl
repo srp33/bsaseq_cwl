@@ -17,15 +17,14 @@ arguments:
 
         varscan mpileup2cns
         "$(inputs.in_file.path)"
-        --min-coverage
-        4
-        --min-var-freq
-        0.5
-        --p-value
-        0.99
+        --min-coverage 8
+        --min-var-freq 0.5
+        --p-value 0.99
         --output-vcf
         --variants
         > \${TEMP_FILE}
+
+        #--min-var-freq 0.5
 
         grep '^##' \${TEMP_FILE} > \${META_FILE}
 

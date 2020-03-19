@@ -4,7 +4,7 @@ cwlVersion: v1.0
 class: CommandLineTool
 requirements:
   DockerRequirement:
-    dockerImageId: subtract_variants
+    dockerImageId: tally_homozygous_windows
     dockerFile: |-
       FROM biocontainers/biocontainers:v1.0.0_cv4
       RUN conda install -c bioconda bedtools -y
@@ -14,10 +14,14 @@ requirements:
     listing:
     - entryname: parse_paths.py
       entry: |-
-        import json, sys
+        data <- commandArgs()[7]
 
-        for d in json.loads(sys.argv[1]):
-            print(d["path"])
+        ggplot(data, aes(x=position)) +
+          geom_histogram(binwidth=1000000) +
+          expand_limits(y=c(0,1000)) +
+          scale_x_continuous(breaks = round(seq(min(0), max(chr1_final_NoWTHapmap$position), by=20000000), 10000000)) +
+          theme(axis.text.x = element_text(angle = 70, hjust = 1)) +
+          theme_bw()
 inputs:
   main_vcf_file:
     type: File

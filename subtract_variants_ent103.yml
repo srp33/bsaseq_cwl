@@ -1,10 +1,11 @@
 main_vcf_file:
   class: File
   path: VCF/ent103.vcf
-subtract_vcf_file_1:
-  class: File
-  path: VCF/a619.vcf
-subtract_vcf_file_2:
-  class: File
-  path: Ref_VCF/zea_mays.vcf
+subtract_vcf_files:
+- {class: File, path: VCF/a619.vcf}
+- {class: File, path: Ref_VCF/zea_mays.vcf}
+- {class: File, path: VCF/ent256.vcf}
+- {class: File, path: VCF/ent285.vcf}
+- {class: File, path: VCF/ent40.vcf}
+- {class: File, path: VCF/ent461.vcf}
 out_file_name: ent103.vcf

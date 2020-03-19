@@ -1,0 +1,6 @@
+main_vcf_file:
+  class: File
+  path: VCF/ent256.vcf
+subtract_vcf_files:
+- {class: File, path: VCF/a619.vcf}
+- {class: File, path: Ref_VCF/zea_mays.vcf}

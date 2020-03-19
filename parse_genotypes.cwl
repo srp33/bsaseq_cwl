@@ -24,10 +24,7 @@ requirements:
         vcf_file_path = sys.argv[1]
         out_file_path = sys.argv[2]
 
-        #ann_df = allel.vcf_to_dataframe(vcf_file_path, fields='ANN', transformers=allel.ANNTransformer())
-        ann_df = allel.vcf_to_dataframe(vcf_file_path, fields='*', transformers=allel.ANNTransformer())
-        ann_df.columns = [c.replace("ANN_", "") for c in ann_df.columns]
-
+        ann_df = allel.vcf_to_dataframe(vcf_file_path, fields='ANN', transformers=allel.ANNTransformer())
         ann_df.to_csv(out_file_path, sep="\t", index=False)
 inputs:
   vcf_file:
@@ -45,4 +42,4 @@ stdout: output.txt
 arguments:
     - shellQuote: false
       valueFrom: >
-        python parse_variants.py $(inputs.vcf_file.path) $(runtime.outdir)/$(inputs.out_file_name)
+        python parse_annotated_variants.py $(inputs.vcf_file.path) $(runtime.outdir)/$(inputs.out_file_name)
